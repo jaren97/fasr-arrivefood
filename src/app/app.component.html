@@ -1,0 +1,33 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="currentUser">
+    <div class="navbar-nav mr-auto">
+        <img alt="" src="https://previews.123rf.com/images/djdarkflower/djdarkflower1806/djdarkflower180600009/102943772-fast-delivery-truck-logo-design.jpg"
+            height="50" width="50">
+        
+        <a class="nav-item nav-link" routerLink="/home">Home</a>
+        <a class="nav-item nav-link" routerLink="/explore">Explore</a>
+        <a class="nav-item nav-link" routerLink="/bookingform">Order</a>
+        <a class="nav-item nav-link" routerLink="/location">Location Map</a>
+        <a class="nav-item nav-link" routerLink="/profile">Profile</a>
+        <a class="nav-item nav-link" routerLink="/editprofile">Edit Profile</a>
+        <a class="nav-item nav-link" routerLink="/about">About</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+
+    </div>
+    <div align="left" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Find Food ...">
+        <a class="btn btn-secondary my-2 my-sm-0" href="./explore" role="button">Search</a>
+    </div>
+</nav>
+
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 offset-sm-12">
+                <alert></alert>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
